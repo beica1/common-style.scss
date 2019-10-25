@@ -1,0 +1,41 @@
+/**
+ * Created by beicai on 2018/12/17
+ */
+$dirs: top right bottom left;
+
+@each $prop in (padding, margin) {
+  @each $span in $spans {
+    $size: $span * $root-factor;
+    $value: $size + px;
+
+    .#{$prop}-#{$size} {
+      #{$prop}: $value;
+    }
+
+    .#{$prop}-v-#{$size} {
+      #{$prop}-top: $value;
+      #{$prop}-bottom: $value;
+    }
+
+    .#{$prop}-h-#{$size} {
+      #{$prop}-left: $value;
+      #{$prop}-right: $value;
+    }
+
+    @each $dir in $dirs {
+      .#{$prop}-#{$dir}-#{$size} {
+        #{$prop}-#{$dir}: $value;
+      }
+    }
+  }
+}
+
+@each $dir in $dirs {
+  .border-#{$dir} {
+    border-#{$dir}: 1px solid $border-color;
+  }
+}
+
+.border {
+  border: 1px solid $border-color;
+}

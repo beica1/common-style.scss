@@ -1,0 +1,39 @@
+/**
+ * Created by beicai on 2018/12/17
+ */
+$root-factor: 10 !default;
+
+$unit-height: $root-factor * 5.6 + px !default;
+
+// font-sizes
+$sizes: (1, 1.2, 1.4, 1.6, 1.8, 2.4, 3.2) !default;
+$font-family: Helvetica, -apple-system, system-ui, Avenir, Arial, sans-serif !default;
+
+// box spans
+$spans: (0.5, 0.8, 1, 1.2, 1.5, 2, 2.5, 3) !default;
+
+// colors
+$blue: #2c5ecc !default;
+$main: $blue !default;
+$orange: #ff6000 !default;
+$asst: $orange !default;
+$grey: #8a9bc4 !default;
+$border-color: rgba($grey, 0.2) !default;
+
+$grey50: rgba($grey, 0.5);
+$grey60: rgba($grey, 0.6);
+
+$colors: (
+  main: $main,
+  asst: $asst,
+  orange: $orange,
+  blue: $blue,
+  black: #000,
+  dark: #444172,
+  grey: $grey,
+  light: #f4f7fc,
+  white: #fff
+) !default;
+
+// transition
+$default-transition: 0.3s ease !default;

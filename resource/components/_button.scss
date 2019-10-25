@@ -1,0 +1,83 @@
+/**
+ * Date: 2018/12/27
+ * Author: beicai
+ * Description:
+ */
+button, .btn {
+  display: block;
+  width: 100%;
+  @extend .h1;
+  text-align: center;
+  @extend .over-hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.btn {
+  &.radius {
+    border-radius: 28px;
+  }
+
+  @each $key in (orange, blue, main, asst) {
+    $color: map_get($colors, $key);
+
+    @if type_of($color) == color {
+      &.#{$key} {
+        color: map_get($colors, white);
+        background: $color;
+
+        &:active {
+          background: darken($color, 10%);
+        }
+
+        &.outline {
+          color: $color;
+          border: 1px solid $color;
+          background: transparent;
+
+          &:active {
+            background: lighten($color, 30%);
+          }
+        }
+
+        &.shadow {
+          box-shadow: 0 20px 20px -10px rgba($color, 0.2);
+        }
+      }
+
+      @if map_get($colors, up) == $color {
+        &.up {
+          @extend .#{$key};
+        }
+      }
+
+      @if map_get($colors, down) == $color {
+        &.down {
+          @extend .#{$key};
+        }
+      }
+    }
+  }
+
+  @extend .blue;
+
+  &.loadable {
+    @extend .pos-rel;
+
+    .step {
+      @extend .abs-fill;
+      @extend .flex-inter-center;
+    }
+  }
+
+  &.disabled,
+  &[disabled] {
+    pointer-events: none;
+    color: $grey;
+    border-color: transparent;
+    background: rgba($grey, 0.3);
+    box-shadow: none !important;
+  }
+}
+

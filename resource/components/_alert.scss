@@ -1,0 +1,18 @@
+/**
+ * Date: 2018/12/27
+ * Author: beicai
+ * Description:
+ */
+.alert {
+  z-index: 1;
+  @extend .pos-abs;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 40px;
+  padding: 10px 15px;
+  @extend .text-center;
+  @extend .font-16;
+  @extend .color-white;
+  background: rgba($asst, 0.9);
+}

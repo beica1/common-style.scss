@@ -1,0 +1,18 @@
+/**
+ * Date: 2019/1/14
+ * Author: beicai
+ * Description: _switchbutton
+ */
+.switch-btn {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  line-height: 37px;
+  color: $grey;
+  background: map_get($colors, light);
+
+  &.active {
+    color: map_get($colors, white);
+    background: $blue;
+  }
+}

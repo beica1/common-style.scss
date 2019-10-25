@@ -1,0 +1,16 @@
+/**
+ * Date: 2019/1/4
+ * Author: beicai
+ * Description: _radiobutton
+ */
+.radio-btn {
+  width: 19px;
+  height: 19px;
+  border: 1px solid $grey;
+  border-radius: 50%;
+
+  &.checked {
+    border-color: $blue;
+    background-size: 10px;
+  }
+}

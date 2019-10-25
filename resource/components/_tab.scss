@@ -1,0 +1,38 @@
+/**
+ * Date: 2018/12/27
+ * Author: beicai
+ * Description:
+ */
+.tab {
+  @extend .pos-rel;
+  @extend .flex;
+  @extend .text-center;
+  background: map_get($colors, white);
+
+  .indicator {
+    @extend .pos-abs;
+    bottom: 0;
+    display: block;
+    height: 3px;
+    background: $blue;
+    transition: left $default-transition;
+
+    &.under-text {
+      border-radius: 1px;
+    }
+  }
+}
+
+.tab__item {
+  height: 50px;
+  @extend .flex-1;
+  @extend .flex-inter-center;
+}
+
+.tab-content {
+  @extend .pos-rel;
+}
+
+.tab-content__item {
+  @extend .abs-fill;
+}

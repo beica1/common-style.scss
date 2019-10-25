@@ -1,0 +1,87 @@
+/**
+ * Date: 2018/12/28
+ * Author: beicai
+ * Description:
+ */
+.form-item {
+  @extend .flex-middle;
+  @extend .over-hidden;
+
+  input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    background: none;
+  }
+
+  // form label
+  &.label {
+    border-color: rgba($grey, 0.6);
+  }
+
+  // form input
+  &.input {
+    height: 48px;
+
+    &.invalid {
+      border-color: $asst;
+    }
+  }
+
+  // form dropdown
+  &.dropdown {
+    height: 48px;
+
+    &.invalid {
+      border-color: $asst;
+    }
+  }
+
+  // form select
+  &.select {
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    &.invalid {
+      .text {
+        color: $asst;
+      }
+    }
+  }
+
+  // form radio
+  &.radio {
+    height: 40px;
+
+    input {
+      display: none;
+    }
+
+    .fake-radio {
+      width: 22px;
+      height: 22px;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      @extend .bg-light;
+    }
+
+    :checked + .fake-radio {
+      background: map_get($colors, white);
+      border-color: $blue;
+
+      &::after {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: $blue;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * Date: 2018/12/18
+ * Author: beicai
+ * Description: style reset
+ */
+div, p, ul, li, ol, span, button, a,
+main, section, article, header, footer,
+time, label {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+p,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+
+img:not(.initial) {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  text-align: inherit;
+}

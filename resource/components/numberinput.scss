@@ -1,0 +1,26 @@
+/**
+ * Date: 2019/1/14
+ * Author: beicai
+ * Description: numberinput
+ */
+.number-input {
+  line-height: 35px;
+  border: 1px solid $grey;
+
+  input {
+    height: 90%;
+    width: 90%;
+    border: none;
+    outline: none;
+  }
+
+  .button {
+    display: inline-block;
+    min-width: 35px;
+    border-left: 1px solid $grey;
+
+    &.disabled img {
+      opacity: 0.3;
+    }
+  }
+}
