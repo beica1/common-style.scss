@@ -6,7 +6,6 @@
 button, .btn {
   display: block;
   width: 100%;
-  @extend .h1;
   text-align: center;
   @extend .over-hidden;
   white-space: nowrap;
