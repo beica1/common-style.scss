@@ -3,13 +3,6 @@
  * Author: beicai
  * Description: _loading
  */
-@keyframes bouncing-loader {
-  to {
-    opacity: 0.1;
-    transform: translateY(-10px);
-  }
-}
-
 .bouncing__item {
   margin: 0 2px;
   width: 8px;
@@ -27,6 +20,27 @@
   }
 }
 
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-10px);
+  }
+}
+
+.donut {
+  @extend .inline-middle;
+  border: 2px solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: donut-spin 1.5s linear infinite;
+
+  &.large {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 @keyframes donut-spin {
   0% {
@@ -35,14 +49,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.donut {
-  @extend .inline-middle;
-  border: 3px solid map_get($colors, light);
-  border-left-color: $blue;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation: donut-spin 1.5s linear infinite;
 }
