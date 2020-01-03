@@ -18,6 +18,8 @@ $main: $blue !default;
 $orange: #ff6000 !default;
 $asst: $orange !default;
 $grey: #8a9bc4 !default;
+$dark: #444172 !default;
+$light: #f4f7fc !default;
 $border-color: rgba($grey, 0.2) !default;
 
 $grey50: rgba($grey, 0.5);
@@ -29,9 +31,9 @@ $colors: (
   orange: $orange,
   blue: $blue,
   black: #000,
-  dark: #444172,
+  dark: $dark,
   grey: $grey,
-  light: #f4f7fc,
+  light: $light,
   white: #fff
 ) !default;
 

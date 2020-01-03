@@ -3,17 +3,22 @@
  * Author: beicai
  * Description:
  */
+.mask,
 .overlay.show {
   @extend .pos-abs;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.overlay.show {
   background: rgba(map_get($colors, black), 0.2);
 }
 
 .dialog {
   @extend .pos-abs;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
